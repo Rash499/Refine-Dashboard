@@ -17,7 +17,6 @@ import { App as AntdApp } from "antd";
 import { createClient } from "graphql-ws";
 import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 import { authProvider } from "./authProvider";
-import { ColorModeContextProvider } from "./contexts/color-mode";
 import Layout from "./components/layout";
 
 const API_URL = "https://api.nestjs-query.refine.dev/graphql";
@@ -29,9 +28,7 @@ const wsClient = createClient({ url: WS_URL });
 function App() {
   return (
     <BrowserRouter>
-      <GitHubBanner />
       <RefineKbarProvider>
-        <ColorModeContextProvider>
           <AntdApp>
             <DevtoolsProvider>
               <Refine
@@ -74,7 +71,6 @@ function App() {
               <DevtoolsPanel />
             </DevtoolsProvider>
           </AntdApp>
-        </ColorModeContextProvider>
       </RefineKbarProvider>
     </BrowserRouter>
   );
