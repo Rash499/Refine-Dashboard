@@ -1,11 +1,25 @@
 import React from 'react'
 import CurrentUser from './current-user'
+import { Layout, Space } from 'antd'
 
 function header() {
+
+  const headerStyle: React.CSSProperties = {
+    background: '#fff',
+    display: 'flex',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    padding: '0px 24px',
+    position: 'sticky',
+    top: 0,
+    zIndex: 999,
+  }
   return (
-    <div>
+    <Layout.Header style={headerStyle}>
+      <Space align='center' size="middle">
         <CurrentUser />
-    </div>
+      </Space>
+    </Layout.Header>
   )
 }
 
