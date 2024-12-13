@@ -1,7 +1,7 @@
 import dayjs from "dayjs";
 
 import { getDateColor } from "./get-date-colors";
-/*
+
 describe("getDateColors function", () => {
   it("should return 'error' if the date is before today", () => {
     const yesterday = dayjs().subtract(1, "day").format("YYYY-MM-DD");
@@ -21,5 +21,3 @@ describe("getDateColors function", () => {
     expect(getDateColor({ date: date })).toBe("default");
   });
 });
-
-*/
